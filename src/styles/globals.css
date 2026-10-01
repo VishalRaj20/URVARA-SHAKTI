@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1B5E20;
+  --color-secondary: #7CB342;
+  --color-soil: #6D4C1F;
+  --color-cream: #F5EEDC;
+  --color-surface: #FAF6ED;
+  --color-text: #122A14;
+  --color-muted: #556B56;
+  --color-border: #D8CEBA;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-text);
+    background-color: var(--color-cream);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #F5EEDC;
+    color: #122A14;
+    overflow-x: hidden;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #1B5E20;
+    outline-offset: 3px;
+  }
+}
+
+/* Custom Leaf SVG mask & motif utils */
+.leaf-mask {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 C70 30 90 40 100 70 C80 100 50 100 0 100 C10 60 30 30 50 0 Z' fill='%23000'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+/* Glassmorphism Surface */
+.glass-cream {
+  background-color: rgba(245, 238, 220, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
